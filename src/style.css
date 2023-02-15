@@ -21,7 +21,7 @@
   column-gap: 100px;
 }
 
-#header {
+.header {
   background: url('./images/headerBg.avif') no-repeat;
   width: 100%;
   height: 100vh;
@@ -280,7 +280,19 @@ footer {
   color: #27bcda;
 }
 
-@media (max-width: 500px) {
+.header.about {
+  background: url('./images/aboutBg.jpg') no-repeat;
+  background-size: cover;
+}
+
+.header.about h2 {
+  background-image: url('./images/textBgAbout.webp') !important;
+  /* background-position: top; */
+  background-repeat: repeat;
+  color: #000;
+}
+
+@media screen and (max-width: 500px) {
   .footer-bottom p {
     float: none;
   }
@@ -293,5 +305,16 @@ footer {
     margin-bottom: 20px;
 
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header h2 {
+    font-size: 40px;
+  }
+
+  #header p {
+    width: 90%;
+    bottom: 0;
   }
 }
